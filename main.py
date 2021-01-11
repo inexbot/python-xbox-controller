@@ -47,7 +47,6 @@ def setRobotDisable():
 
 
 def jogRobot(axis, direction):
-    print("3333")
     link.SendMessage(0x2901, {"axis": axis, "direction": direction})
 
 
@@ -61,27 +60,27 @@ print("Press Back button to exit")
 while not joy.Back():
     # A/B/X/Y buttons
     if joy.leftX() > 0.1:
-        jogRobot(2, 1)
+        jogRobot(2, joy.leftX())
     if joy.leftX() < -0.1:
-        jogRobot(2, -1)
+        jogRobot(2, joy.leftX())
     elif joy.leftX() <= 0.1 and joy.leftX() >= -0.1:
         stopJog(2)
     if joy.leftY() > 0.1:
-        jogRobot(1, 1)
+        jogRobot(1, joy.leftY())
     if joy.leftY() < -0.1:
-        jogRobot(1, -1)
+        jogRobot(1, joy.leftY())
     elif joy.leftY() <= 0.1 and joy.leftY() >= -0.1:
         stopJog(1)
     if joy.rightX() > 0.1:
-        jogRobot(4, -1)
+        jogRobot(4, joy.rightX)
     if joy.rightX() < -0.1:
-        jogRobot(4, 1)
+        jogRobot(4, joy.rightX)
     elif joy.rightX() <= 0.1 and joy.rightX() >= -0.1:
         stopJog(4)
     if joy.rightY() > 0.1:
-        jogRobot(5, -1)
+        jogRobot(5, joy.rightY)
     if joy.rightY() < -0.1:
-        jogRobot(5, 1)
+        jogRobot(5, joy.rightY)
     elif joy.rightY() <= 0.1 and joy.rightY() >= -0.1:
         stopJog(5)
     if joy.dpadUp():
