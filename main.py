@@ -72,15 +72,15 @@ while not joy.Back():
     elif joy.leftY() <= 0.1 and joy.leftY() >= -0.1:
         stopJog(1)
     if joy.rightX() > 0.1:
-        jogRobot(4, joy.rightX)
+        jogRobot(4, joy.rightX())
     if joy.rightX() < -0.1:
-        jogRobot(4, joy.rightX)
+        jogRobot(4, joy.rightX())
     elif joy.rightX() <= 0.1 and joy.rightX() >= -0.1:
         stopJog(4)
     if joy.rightY() > 0.1:
-        jogRobot(5, joy.rightY)
+        jogRobot(5, joy.rightY())
     if joy.rightY() < -0.1:
-        jogRobot(5, joy.rightY)
+        jogRobot(5, joy.rightY())
     elif joy.rightY() <= 0.1 and joy.rightY() >= -0.1:
         stopJog(5)
     if joy.dpadUp():
