@@ -13,7 +13,6 @@ def Connect(ip, port):
 def getBuffer(command, data):
     _preSend = bytearray()
     # get byte of data
-    print(data)
     databyte = json.dumps(data).encode()
     # Length
     dataLength = databyte.__len__()

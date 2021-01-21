@@ -117,9 +117,9 @@ while not joy.Back():
         jogRobot(6, -1)
     if joy.rightTrigger():
         jogRobot(6, 1)
-    if joy.rightTrigger() == 0 and joy.leftTrigger == 0:
+    if joy.rightTrigger() == 0 and joy.leftTrigger() == 0:
         stopJog(6)
-    time.sleep(0.1)
+    time.sleep(0.05)
     # Move cursor back to start of line
 # Close out when done
 joy.close()
